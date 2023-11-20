@@ -47,6 +47,7 @@
 
 // Initialise an empty array with the variable name todoItems
 let todoItems = [];
+let idCounter = 1
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
@@ -55,8 +56,8 @@ let todoItems = [];
 // the function does not need to return anything
 function addToDoItem(text) {
   // Implement the logic to add a task here
-  const id = idCounter++;
 
+  const id = idCounter++;
   const newTodo = {
     id: id,
     text: text,
@@ -116,11 +117,6 @@ function deleteToDoItem(todoId) {
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
-  for (let i = 0; i < todoItems.length; i = i + 1 ) {
-    if (todoItems[i].completed == true) {
-      todoItems.splice(i, 1);
-    }
-  }
 }
 
 // You can write your own tests here if you would like to test
